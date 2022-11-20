@@ -1,0 +1,45 @@
+body{
+    background-color: rgba(0, 0, 0, 0.778);
+}
+button{
+    position: absolute;
+    left: 29rem;
+    top: 15rem;
+    border: none;
+    color: #ffffff;
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient( 90deg, #e403f4, #1507a8, #f2ff3b, #ca0909, #e403f4);
+    text-transform: uppercase;
+    background-size: 300%;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+button:hover{
+    animation: animation 8s linear infinite;
+    border: none;
+    box-shadow: 2px 3px 2px #ffffff3e;
+}
+@keyframes animation {
+    0% {background-position: 0%;}
+    100% {background-position: 400%;}
+}
+button:before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -5;
+    background: linear-gradient( 90deg, #e403f4, #1507a8, #f2ff3b, #ca0909, #e403f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+button:hover::before{
+    filter: blur(10px);
+}
